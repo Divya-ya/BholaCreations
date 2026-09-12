@@ -276,7 +276,7 @@ if (categoryError) {
           {/* Desktop Hero Image - landscape image */}
 
           <Image
-            src="/products/landscape_frontpagev3.jpg"
+            src="/products/landscape_frontpageV3.jpg"
             alt="Bhola Creations Fashion Collection"
             fill
             className="hidden object-cover object-center lg:block"

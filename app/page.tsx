@@ -122,12 +122,12 @@ className="relative ml-0 font-bold tracking-[0.1em] sm:ml-0 sm:tracking-[0.22em]
             {/* Search */}
 
             <div
-              className={`flex min-w-0 items-center transition-all duration-300 ${
-              searchOpen
-              ? "w-[calc(100vw-220px)] sm:w-[300px] md:w-[380px] lg:w-[600px] xl:w-[800px]"
-              : "w-6"
-              }`}
-            >
+  className={`flex min-w-0 items-center transition-all duration-300 ${
+    searchOpen
+      ? "w-[calc(100vw-220px)] max-w-full sm:w-[300px] md:w-[380px] lg:w-[600px] xl:w-[800px]"
+      : "w-6"
+  }`}
+>
               {!searchOpen ? (
                 <button
   type="button"

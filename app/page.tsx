@@ -61,19 +61,25 @@ if (categoryError) {
       ========================================================= */}
 
       <header className="sticky top-0 z-50 border-b border-[#e7e5e0] bg-[#f8f7f4]/95 backdrop-blur">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+  <div className="relative mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
           {/* Logo */}
 
           <a
             href="#"
-            className="text-xl font-semibold tracking-[0.22em] sm:text-2xl"
-          >
-            BHOLA CREATIONS
+className="relative ml-0 font-bold tracking-[0.1em] sm:ml-0 sm:tracking-[0.22em] lg:translate-x-[calc(80px-max(32px,calc((100vw-1280px)/2+32px)))]"
+>
+<b className="whitespace-nowrap text-[17px] sm:text-[22px] md:text-[22px] lg:text-[27px]">
+  BHOLA CREATIONS
+</b>
           </a>
 
           {/* Desktop Navigation */}
 
-          <nav className="relative -top-[3px] hidden items-center gap-8 text-sm md:flex">
+<nav
+  className={`relative -top-[3px] ${
+    searchOpen ? "!hidden" : "hidden lg:flex"
+  } items-center gap-8 text-sm`}
+>
             <a
               href="#"
               className="transition-colors hover:text-[#b08d57]"
@@ -112,23 +118,23 @@ if (categoryError) {
 
           {/* Header Icons */}
 
-          <div className="relative -top-[3px] flex items-center gap-5 sm:gap-6">
+          <div className="relative z-[100] -top-[3px] flex items-center gap-5 sm:gap-6">
             {/* Search */}
 
             <div
               className={`flex items-center transition-all duration-300 ${
                 searchOpen
-                  ? "w-[220px] sm:w-[300px] md:w-[380px] lg:w-[430px]"
-                  : "w-6"
+  ? "w-[220px] sm:w-[300px] md:w-[380px] lg:w-[600px] xl:w-[800px]"
+  : "w-6"
               }`}
             >
               {!searchOpen ? (
                 <button
-                  type="button"
-                  aria-label="Search"
-                  onClick={() => setSearchOpen(true)}
-                  className="flex h-6 w-6 items-center justify-center transition-colors hover:text-[#b08d57]"
-                >
+  type="button"
+  aria-label="Search"
+  onClick={() => setSearchOpen(true)}
+  className="relative z-20 flex h-8 w-8 touch-manipulation items-center justify-center transition-colors hover:text-[#b08d57]"
+>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -202,10 +208,10 @@ if (categoryError) {
             {/* Shopping Bag */}
 
              <a
-  href="/cart"
-  aria-label="Shopping bag"
-  className="relative transition-colors hover:text-[#b08d57]"
->
+             href="/cart"
+             aria-label="Shopping bag"
+             className="relative transition-colors hover:text-[#b08d57]"
+             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -216,14 +222,16 @@ if (categoryError) {
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                className="relative -top-[3px]"
               >
                 <path d="M6 8h12l1 13H5L6 8Z" />
                 <path d="M9 8a3 3 0 0 1 6 0" />
+
               </svg>
 
               {/* Cart Count */}
 
-              <span className="absolute -right-3 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#b08d57] text-[10px] font-medium text-white">
+              <span className="absolute -right-3 -top-2 flex h-5 w-4 items-center justify-center rounded-full bg-[#b08d57] text-[10px] font-medium text-white">
                 0
               </span>
             </a>
@@ -232,7 +240,7 @@ if (categoryError) {
 
             <button
               aria-label="Menu"
-              className="transition-colors hover:text-[#b08d57] md:hidden"
+              className="hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -297,10 +305,10 @@ if (categoryError) {
             Mobile positioning is kept unchanged.
             Desktop: text overlays the landscape image. */}
 
-        <div className="absolute inset-x-0 top-1/4 z-10 flex flex-col justify-start px-6 pt-0 pb-6 sm:pb-8 lg:inset-x-auto lg:bottom-16 lg:left-0 lg:top-auto lg:w-1/2 lg:bg-transparent lg:px-16 lg:py-0 xl:px-24">
+        <div className="absolute inset-x-0 top-1/4 z-10 flex flex-col justify-start px-6 pt-0 pb-6 sm:pb-8 lg:inset-x-auto lg:bottom-16 lg:left-0 lg:top-auto lg:w-1/2 lg:bg-transparent lg:px-20 lg:py-0">
           <div className="max-w-xl">
-            <h1 className="max-w-[clamp(150px,70vw,280px)] text-4xl font-semibold leading-tight tracking-tight text-white sm:text-4xl lg:max-w-[520px] lg:text-6xl lg:text-white xl:text-7xl">
-              Dress with confidence.
+            <h1 className="max-w-[clamp(150px,70vw,280px)] text-4xl font-semibold leading-tight tracking-[0.05em] text-white sm:text-4xl lg:max-w-[520px] lg:text-6xl lg:text-white xl:text-7xl">
+              Dress with Confidence.
             </h1>
 
             <p className="mt-5 max-w-[180px] text-xs leading-6 text-white/90 sm:max-w-lg sm:text-sm sm:leading-6 lg:max-w-lg lg:text-base lg:text-white/90">

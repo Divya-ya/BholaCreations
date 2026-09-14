@@ -1,0 +1,3 @@
+git add app/admin/products/new/page.tsx
+git commit -m ""
+git push origin main

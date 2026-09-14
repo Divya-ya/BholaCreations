@@ -76,7 +76,7 @@ className="relative ml-0 font-bold tracking-[0.1em] sm:ml-0 sm:tracking-[0.22em]
           {/* Desktop Navigation */}
 
 <nav
-  className={`relative -top-[3px] ${
+  className={`relative -top-[3px] lg:translate-x-[180px] ${
     searchOpen ? "!hidden" : "hidden lg:flex"
   } items-center gap-8 text-sm`}
 >
@@ -118,15 +118,15 @@ className="relative ml-0 font-bold tracking-[0.1em] sm:ml-0 sm:tracking-[0.22em]
 
           {/* Header Icons */}
 
-          <div className="relative z-[100] -top-[3px] flex items-center gap-5 sm:gap-6">
+          <div className="relative z-[100] -top-[3px] ml-4 flex min-w-0 flex-1 items-center justify-end gap-5 sm:ml-auto sm:gap-6">
             {/* Search */}
 
             <div
   className={`flex min-w-0 items-center transition-all duration-300 ${
-    searchOpen
-      ? "w-[calc(100vw-220px)] max-w-full sm:w-[300px] md:w-[380px] lg:w-[600px] xl:w-[800px]"
-      : "w-6"
-  }`}
+  searchOpen
+    ? "min-w-0 flex-1 sm:flex-none sm:w-[300px] md:w-[380px] lg:w-[600px] xl:w-[800px]"
+    : "w-6"
+}`}
 >
               {!searchOpen ? (
                 <button
@@ -207,11 +207,12 @@ className="relative ml-0 font-bold tracking-[0.1em] sm:ml-0 sm:tracking-[0.22em]
 
             {/* Shopping Bag */}
 
-             <a
-             href="/cart"
-             aria-label="Shopping bag"
-             className="relative transition-colors hover:text-[#b08d57]"
-             >
+            <div className={searchOpen ? "hidden sm:block" : "block"}>
+              <a
+                href="/cart"
+                aria-label="Shopping bag"
+                className="relative transition-colors hover:text-[#b08d57]"
+              >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -234,7 +235,8 @@ className="relative ml-0 font-bold tracking-[0.1em] sm:ml-0 sm:tracking-[0.22em]
               <span className="absolute -right-3 -top-2 flex h-5 w-4 items-center justify-center rounded-full bg-[#b08d57] text-[10px] font-medium text-white">
                 0
               </span>
-            </a>
+              </a>
+            </div>
 
             {/* Mobile Menu */}
 
@@ -323,7 +325,7 @@ className="relative ml-0 font-bold tracking-[0.1em] sm:ml-0 sm:tracking-[0.22em]
                 href="#products"
                 className="inline-flex h-11 w-full items-center justify-center bg-[#B8925A] px-6 text-sm font-medium !text-white transition-all duration-300 hover:bg-[#A67F49] focus:outline-none focus:ring-2 focus:ring-[#B8925A] focus:ring-offset-2 sm:h-11 sm:px-6 sm:text-sm lg:h-auto lg:w-full lg:px-12 lg:py-4 lg:text-base"
               >
-                <span className="!text-white">Shop Collection</span>
+                <span className="!text-white">Shop Now</span>
 
                 <span className="ml-3 text-base font-light !text-white lg:text-lg">
                   →
